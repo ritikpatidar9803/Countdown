@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Countdown</title>
+</head>
+<body>
+    <main class="wrapper">
+        <div class="circle"></div>
+        <div class="dashed"></div>
+        <button class="button-17" role="button">Start Timer</button>
+    </main>
+    
+    
+    <script>
+        const btn = document.getElementsByClassName("button-17");
+        const cicle = document.getElementsByClassName("circle");
+        const wrapper = document.getElementsByClassName("wrapper");
+        btn[0].addEventListener('click', () => {
+            cicle[0].classList.add('active');
+            wrapper[0].classList.add('active');
+            setTimeout(function() {
+                cicle[0].classList.remove('active');
+                wrapper[0].classList.remove('active');
+            }, 5000);
+        })
+    </script>
+</body>
+</html>
